@@ -1,110 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-
-<title>Fofi ❤️</title>
-
-<style>
-body {
-    margin: 0;
-    height: 100vh;
-    background: linear-gradient(to right, #ff758c, #ff7eb3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-}
-
-.card {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    max-width: 420px;
-}
-
-h1 {
-    color: #ff4d6d;
-}
-
-p {
-    font-size: 18px;
-    color: #444;
-}
-
-button {
-    margin: 15px;
-    padding: 12px 28px;
-    font-size: 18px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
-#yes {
-    background-color: #ff4d6d;
-    color: white;
-}
-
-#no {
-    background-color: #ddd;
-    position: absolute;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Test</title>
 </head>
-
-<body>
-
-<div class="card">
-    <h1>Fofi ❤️</h1>
-
-    <p>
-        Since <b>18/10</b>, my life changed in the most beautiful way.<br><br>
-        Will you be my Valentine? 💕
-    </p>
-
-    <button id="yes" onclick="yesClick()">YES 😍</button>
-    <button id="no">NO 🙃</button>
-</div>
-
-<script>
-function yesClick() {
-    document.body.innerHTML = `
-    <div style="
-        height:100vh;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        flex-direction:column;
-        color:white;
-        background: linear-gradient(to right, #ff758c, #ff7eb3);
-        font-family:Arial;
-        text-align:center;">
-        <h1>HAPPY VALENTINE’S FOFI ❤️</h1>
-        <p style="font-size:22px;">From 18/10 until forever 💖</p>
-    </div>`;
-}
-
-const noBtn = document.getElementById("no");
-
-document.addEventListener("mousemove", () => {
-    noBtn.style.left = Math.random() * (window.innerWidth - 120) + "px";
-    noBtn.style.top = Math.random() * (window.innerHeight - 60) + "px";
-});
-
-noBtn.addEventListener("touchstart", () => {
-    noBtn.style.left = Math.random() * (window.innerWidth - 120) + "px";
-    noBtn.style.top = Math.random() * (window.innerHeight - 60) + "px";
-});
-</script>
-
+<body style="background:pink;">
+  <h1 style="color:black; text-align:center; margin-top:40vh;">
+    IT WORKS ❤️
+  </h1>
 </body>
 </html>
