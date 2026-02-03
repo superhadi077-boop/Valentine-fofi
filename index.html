@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
 <title>Fofi ❤️</title>
 
 <style>
@@ -28,7 +33,6 @@ body {
 
 h1 {
     color: #ff4d6d;
-    font-size: 34px;
 }
 
 p {
@@ -46,4 +50,61 @@ button {
 }
 
 #yes {
-    b
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#no {
+    background-color: #ddd;
+    position: absolute;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Fofi ❤️</h1>
+
+    <p>
+        Since <b>18/10</b>, my life changed in the most beautiful way.<br><br>
+        Will you be my Valentine? 💕
+    </p>
+
+    <button id="yes" onclick="yesClick()">YES 😍</button>
+    <button id="no">NO 🙃</button>
+</div>
+
+<script>
+function yesClick() {
+    document.body.innerHTML = `
+    <div style="
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        color:white;
+        background: linear-gradient(to right, #ff758c, #ff7eb3);
+        font-family:Arial;
+        text-align:center;">
+        <h1>HAPPY VALENTINE’S FOFI ❤️</h1>
+        <p style="font-size:22px;">From 18/10 until forever 💖</p>
+    </div>`;
+}
+
+const noBtn = document.getElementById("no");
+
+document.addEventListener("mousemove", () => {
+    noBtn.style.left = Math.random() * (window.innerWidth - 120) + "px";
+    noBtn.style.top = Math.random() * (window.innerHeight - 60) + "px";
+});
+
+noBtn.addEventListener("touchstart", () => {
+    noBtn.style.left = Math.random() * (window.innerWidth - 120) + "px";
+    noBtn.style.top = Math.random() * (window.innerHeight - 60) + "px";
+});
+</script>
+
+</body>
+</html>
