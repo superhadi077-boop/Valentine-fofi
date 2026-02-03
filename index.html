@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fofi ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            animation: fadeIn 2s ease;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #ff4d6d;
+            font-size: 34px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+        }
+
+        .date {
+            color: #ff4d6d;
+            font-weight: bold;
+        }
+
+        button {
+            margin: 15px;
+            padding: 12px 28px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        #yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+
+        #no {
+            background-color: #ddd;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.85); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 20px;
+            animation: float 6s linear infinite;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(100vh);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-10vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Fofi ❤️</h1>
+
+    <p>
+        Since <span class="date">18/10</span>,  
+        my life changed in the most beautiful way.<br><br>
+        Every moment with you means more than you know.
+    </p>
+
+    <h1>Will you be my Valentine? 💕</h1>
+
+    <button id="yes" onclick="yesClick()">YES 😍</button>
+    <button id="no" onmouseover="moveNo()">NO 🙃</button>
+</div>
+
+<script>
+    function yesClick() {
+        document.body.innerHTML = `
+            <div style="
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height:100vh;
+                flex-direction:column;
+                color:white;
+                text-align:center;
+                font-family:Arial;
+                background: linear-gradient(to right, #ff758c, #ff7eb3);
+            ">
+                <h1>HAPPY VALENTINE’S, FOFI ❤️</h1>
+                <p style="font-size:22px; max-width:500px;">
+                    From 18/10 until forever,<br>
+                    you are my favorite person,  
+                    my safest place, and my greatest love 💖
+                </p>
+            </div>
+        `;
+    }
+
+    function moveNo() {
+        const noBtn = document.getElementById('no');
+        noBtn.style.position = 'absolute';
+        noBtn.style.top = Math.random() * 80 + '%';
+        noBtn.style.left = Math.random() * 80 + '%';
+    }
+
+    // Floating hearts animation
+    setInterval(() => {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.innerHTML = '❤️';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.fontSize = Math.random() * 20 + 15 + 'px';
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 6000);
+    }, 300);
+</script>
+
+</body>
+</html>
